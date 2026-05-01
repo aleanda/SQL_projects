@@ -1,1 +1,9 @@
+/*
+Scenario: Il team commerciale vuole una lista delle polizze più costose di una specifica categoria.
+Richiesta: Scrivi una query sulla tabella Polizze che estragga l'id_polizza e il premio_annuo. Filtra solo le polizze del tipo 'Ramo Vita' che hanno un premio annuo superiore a 1500€. Infine, ordina i risultati dal premio più alto a quello più basso.
+*/
 
+SELECT id_polizza, premio_annuo
+FROM POLIZZE
+WHERE tipo_copertura = 'Ramo Vita' AND premio_annuo > 1500
+ORDER BY premio_annuo DESC;
